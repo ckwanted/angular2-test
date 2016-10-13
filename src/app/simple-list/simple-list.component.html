@@ -1,0 +1,5 @@
+<li>
+  {{ mensaje.text }}
+  <input #myInput type="text" [(ngModel)]="mensaje.text">
+  <button (click)="update.emit({text : mensaje})">Click</button>
+</li>

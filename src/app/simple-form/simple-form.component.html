@@ -1,0 +1,9 @@
+<div>
+  <input
+          #myInput
+          type="text"
+          [ngClass]="{borde: aplicarClase}"
+          (click)="aplicarClase = true"
+  >
+  <button (click)="onClick($event, myInput.value)">Click</button>
+</div>

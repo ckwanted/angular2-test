@@ -1,3 +1,15 @@
-<h1>
-  {{title}}
-</h1>
+<app-simple-form></app-simple-form>
+
+<ul>
+    <app-simple-list
+            *ngFor="let mensaje of mail.mensajes"
+            [mensaje]="mensaje"
+            (update)="onUpdate(mensaje.id, $event.text)">
+    </app-simple-list>
+</ul>
+
+<hr/>
+
+<ul>
+    <li *ngFor="let mensaje of mail.mensajes">{{ mensaje.text }}</li>
+</ul>
